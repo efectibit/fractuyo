@@ -11,6 +11,10 @@ class Person {
 		return this.#name
 	}
 
+	/**
+	 * The main name.
+	 * @param {string} n - Real name of person, the legal name.
+	 */
 	setName(n) {
 		n = n?.trim()
 		if (n && n.length > 0) {
