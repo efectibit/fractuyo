@@ -5,9 +5,8 @@ import Sale from "./Sale.js"
 import Charge from "./Charge.js"
 import PrepaidPaymentReference from "./PrepaidPaymentReference.js"
 import Detraction from "./Detraction.js"
+import DocumentReference from "./DocumentReference.js"
 import TagsGenerator from "./xml/TagsGenerator.js"
-
-/** @typedef {import('./DocumentReference.js').default} DocumentReference */
 
 class Invoice extends Sale {
 	constructor(taxpayer, customer) {

@@ -7,10 +7,9 @@ import SoapEnvelope from "./xml/SoapEnvelope.js"
 import Endpoint from "../webservice/Endpoint.js"
 
 import DocumentReference from "./DocumentReference.js"
-
-/** @typedef {import("./Item.js").default} Item */
-/** @typedef {import("../person/Taxpayer.js").default} Taxpayer */
-/** @typedef {import("../person/Person.js").default} Person */
+import Item from "./Item.js"
+import Taxpayer from "../person/Taxpayer.js"
+import Person from "../person/Person.js"
 
 /**
  * The Receipt class serves as the abstract foundation for all document types in the library.

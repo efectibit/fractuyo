@@ -4,10 +4,8 @@ import Sale from "./Sale.js"
 import DocumentReference from "./DocumentReference.js"
 import TagsGenerator from "./xml/TagsGenerator.js"
 
-/**
- * @typedef {import("../person/Taxpayer.js").default} Taxpayer
- * @typedef {import("../person/Person.js").default} Customer
- */
+import Taxpayer from "../person/Taxpayer.js"
+import Person from "../person/Person.js"
 
 class Note extends Sale {
 	#description
@@ -30,7 +28,7 @@ class Note extends Sale {
 
 	/**
 	 * @param {Taxpayer} taxpayer
-	 * @param {Customer} customer - Generic person
+	 * @param {Person} customer - Generic person
 	 * @param {boolean} isCredit - Must be boolean to choose between credit as true or false for debit.
 	 */
 	constructor(taxpayer, customer, isCredit) {
