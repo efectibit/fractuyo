@@ -31,6 +31,10 @@ import TagsGenerator from "./xml/TagsGenerator.js"
  * await invoice.finalize(subtle)
  */
 class Invoice extends Sale {
+	/**
+	 * @param {Taxpayer} taxpayer - Taxpayer with all their details ready.
+	 * @param {Person} customer - Generic person.
+	 */
 	constructor(taxpayer, customer) {
 		super(taxpayer, customer, "Invoice")
 	}
