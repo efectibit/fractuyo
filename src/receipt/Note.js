@@ -27,8 +27,9 @@ class Note extends Sale {
 	#billingDocumentReference
 
 	/**
-	 * @param {Taxpayer} taxpayer
-	 * @param {Person} customer - Generic person
+	 * 
+	 * @param {Taxpayer} taxpayer - Taxpayer with all their details ready.
+	 * @param {Person} customer - Generic person.
 	 * @param {boolean} isCredit - Must be boolean to choose between credit as true or false for debit.
 	 */
 	constructor(taxpayer, customer, isCredit) {
