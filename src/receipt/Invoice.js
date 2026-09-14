@@ -12,6 +12,24 @@ import Detraction from "./Detraction.js"
 import DocumentReference from "./DocumentReference.js"
 import TagsGenerator from "./xml/TagsGenerator.js"
 
+/**
+ * The Invoice class represents an electronic invoice compliant with Sunat standards.
+ * There are 2 options: factura or boleta de venta.
+ *
+ * @example
+ * invoice = new Invoice(taxpayer, customer)
+ * invoice.setIssueDate(new Date("13-Sep-2026 UTC"))
+ * invoice.setCurrencyId("PEN")
+ * invoice.setTypeCode(1)
+ * invoice.setSerie("F000")
+ * invoice.setNumeration(19931105)
+ * invoice.setOrderReference("kar01")
+ * invoice.setOrderReferenceText("Exchanging money")
+ * invoice.addItem(product)
+ * invoice.addDocumentReference(additionalDocumentReference)
+ * invoice.toXml()
+ * await invoice.finalize(subtle)
+ */
 class Invoice extends Sale {
 	constructor(taxpayer, customer) {
 		super(taxpayer, customer, "Invoice")
