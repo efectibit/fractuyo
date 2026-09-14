@@ -1,3 +1,7 @@
+/**
+ * @module receipt
+ */
+ 
 import { Parse } from "xmldsigjs"
 import XmlSigner from "./xml/XmlSigner.js"
 import writtenNumber from "written-number"

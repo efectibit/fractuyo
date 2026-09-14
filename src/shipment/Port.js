@@ -1,4 +1,8 @@
 /**
+ * @module shipment
+ */
+
+/**
  * When items arrive in import.
  */
 class Port {

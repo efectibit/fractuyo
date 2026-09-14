@@ -1,3 +1,7 @@
+/**
+ * @module person
+ */
+
 import Person from "./Person.js"
 
 import * as asn1js from "asn1js"

@@ -1,3 +1,7 @@
+/**
+ * @module receipt/xml
+ */
+
 import { DOMImplementation } from "@xmldom/xmldom"
 
 /**
