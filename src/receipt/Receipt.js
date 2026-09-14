@@ -445,7 +445,16 @@ class Receipt {
 	 * @param {string} zipStream - The zip file.
 	 * @param {boolean} isBase64 - Whether the zip file is base64.
 	 * @param {boolean} compacted - Whether the document is compacted.
-	 * @returns {Promise<Array<number|string>>} The proof of the document.
+	 * @returns {Promise<Array<number|string>>} Code and description in the proof of the document.
+	 *
+	 * @example <caption>Handling CDR</caption>
+	 * const [cdrCode, cdrDescription] = await invoice.handleProof(serverZipStream)
+	 * if (cdrCode === 0) {
+	 *   console.log("OK", cdrDescription)
+	 * }
+	 * else {
+	 *   console.log(cdrDescription)
+	 * }
 	 */
 	async handleProof(zipStream, isBase64 = true, compacted = false) {
 		const zip = new JSZip()
