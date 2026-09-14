@@ -1,3 +1,7 @@
+/**
+ * @module receipt
+ */
+
 import DocumentReference from "./DocumentReference.js";
 
 /**

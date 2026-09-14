@@ -1,3 +1,7 @@
+/**
+ * @module person
+ */
+
 import Person from "./Person.js"
 
 /**

@@ -1,3 +1,7 @@
+/**
+ * @module receipt
+ */
+
 import Receipt from "./Receipt.js"
 import DocumentReference from "./DocumentReference.js"
 import PrepaidPaymentReference from "./PrepaidPaymentReference.js"

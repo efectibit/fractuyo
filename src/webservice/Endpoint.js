@@ -1,3 +1,7 @@
+/**
+ * @module webservice
+ */
+
 import Rest from "./Rest.js"
 
 /**

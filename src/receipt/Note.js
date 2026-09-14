@@ -1,3 +1,7 @@
+/**
+ * @module receipt
+ */
+
 import Item from "./Item.js"
 import Receipt from "./Receipt.js"
 import Sale from "./Sale.js"

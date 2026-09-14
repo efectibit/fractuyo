@@ -1,3 +1,7 @@
+/**
+ * @module receipt
+ */
+
 var Share = function() {
 	var dueDate, amount
 
