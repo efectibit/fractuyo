@@ -42,6 +42,11 @@ class Note extends Sale {
 		}
 	}
 
+	/**
+	 * Set type again for converting note in credit note or debit note.
+	 * You don't need it when you set it in constructor.
+	 * @param {number} code - Number 7 for credit, number 8 for debit.
+	 */
 	setTypeCode(code) {
 		if (code == 7 || code == 8) {
 			super.setTypeCode(code)
