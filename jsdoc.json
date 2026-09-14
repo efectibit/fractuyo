@@ -21,6 +21,10 @@
 		"removeTrailingSlash": true
 	},
 	"plugins": [
+		"plugins/markdown",
 		"jsdoc-plugin-typescript"
-	]
+	],
+	"markdown": {
+		"hardwrap": true
+	}
 }
