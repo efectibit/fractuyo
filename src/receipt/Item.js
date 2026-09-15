@@ -78,7 +78,12 @@ class Item {
 	}
 
 	/**
-	 * @param {string} c - Item code.
+	 * Sets the item product code (internal coding or stock code).
+	 * Optional, or mandatory if replacing the detailed description by Sunat regulations.
+	 *
+	 * @param {string} c - Product code.
+	 * @example
+	 * item.setCode("Cap-258963");
 	 */
 	setCode(c) {
 		if ((typeof c === "string") && c.length > 0) {
@@ -87,7 +92,8 @@ class Item {
 	}
 
 	/**
-	 * @returns {string} - Item code.
+	 * Gets the item product code.
+	 * @returns {string} Item code.
 	 */
 	getCode() {
 		return this.#code
