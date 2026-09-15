@@ -1,4 +1,5 @@
 import Receipt from "./receipt/Receipt.js";
+import Sale from "./receipt/Sale.js";
 import Invoice from "./receipt/Invoice.js";
 import Note from "./receipt/Note.js";
 import Despatch from "./receipt/Despatch.js";
@@ -22,6 +23,7 @@ import Endpoint from "./webservice/Endpoint.js";
 
 export {
 	Receipt,
+	Sale,
 	Invoice,
 	Note,
 	Despatch,
