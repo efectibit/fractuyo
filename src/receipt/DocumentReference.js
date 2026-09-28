@@ -1,8 +1,4 @@
 /**
- * @module receipt
- */
-
-/**
  * Any document to hold its identity.
  */
 class DocumentReference {

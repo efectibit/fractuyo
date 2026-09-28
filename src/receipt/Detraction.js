@@ -1,8 +1,4 @@
 /**
- * @module receipt
- */
-
-/**
  * Detraction represents a Peruvian tax withholding mechanism that applies to certain goods and services. It requires withholding a percentage of the invoice total and depositing it into a special bank account.
  * Detraction only applies if the invoice amount exceeds 700 PEN.
  */
