@@ -1,7 +1,3 @@
-/**
- * @module receipt/xml
- */
-
 import Receipt from "../Receipt.js"
 import PrepaidPaymentReference from "../PrepaidPaymentReference.js"
 

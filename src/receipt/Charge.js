@@ -1,8 +1,4 @@
 /**
- * @module receipt
- */
-
-/**
  * The Charge class represents a charge or discount that can be applied to an item.
  * It is used to store information about charges or discounts, such as the amount, type code and factor.
  */

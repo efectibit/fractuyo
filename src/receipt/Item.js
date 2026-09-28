@@ -1,8 +1,4 @@
 /**
- * @module receipt
- */
-
-/**
  * Represents a line in the document.
  * When you finish setting all the item's properties, call calcMounts() to calculate the mounts.
  */

@@ -1,8 +1,4 @@
 /**
- * @module shipment
- */
-
-/**
  * Used as container.
  */
 class Package {

@@ -1,7 +1,3 @@
-/**
- * @module webservice
- */
-
 import { Application } from "xmldsigjs"
 
 /**

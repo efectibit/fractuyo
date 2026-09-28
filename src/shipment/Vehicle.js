@@ -1,7 +1,3 @@
-/**
- * @module shipment
- */
- 
 class Vehicle {
 	#identity // registration, placa, matrícula
 
