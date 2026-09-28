@@ -1,26 +1,49 @@
-var Share = function() {
-	var dueDate, amount
+/**
+ * Represents a payment share (cuota) for UBL 2.1 electronic invoices.
+ */
+class Share {
+	#dueDate;
+	#amount;
 
-	this.setDueDate = function(dd) {
-		dueDate = dd
+	/**
+	 * Sets the due date for the share.
+	 * @param {Date} dd - The due date.
+	 */
+	setDueDate(dd) {
+		this.#dueDate = dd;
 	}
 
-	this.getDueDate = function() {
-		return dueDate
+	/**
+	 * Gets the due date of the share.
+	 * @returns {Date} The due date.
+	 */
+	getDueDate() {
+		return this.#dueDate;
 	}
 
-	this.setAmount = function(a) {
-		amount = parseFloat(a)
-		if(isNaN(amount)) {
-			throw new Error("Cantidad de cuota no es un número.")
+	/**
+	 * Sets and validates the amount for the share.
+	 * @param {number|string} a - The share amount.
+	 * @throws {Error} If the value is not a number or is less than or equal to zero.
+	 */
+	setAmount(a) {
+		const parsed = parseFloat(a);
+		if (isNaN(parsed)) {
+			throw new Error("Share amount is not a valid number.");
 		}
-		if(amount <= 0) {
-			throw new Error("Monto de cuota no puede ser 0.")
+		if (parsed <= 0) {
+			throw new Error("Share amount cannot be 0 or less.");
 		}
+		this.#amount = parsed;
 	}
 
-	this.getAmount = function(withFormat = false) {
-		return withFormat ? amount.toFixed(2) : amount
+	/**
+	 * Gets the amount of the share.
+	 * @param {boolean} [withFormat=false] - If true, returns the value formatted to 2 decimal places.
+	 * @returns {number|string} The share amount.
+	 */
+	getAmount(withFormat = false) {
+		return withFormat ? this.#amount.toFixed(2) : this.#amount;
 	}
 }
 
