@@ -67,7 +67,15 @@ class Taxpayer extends Person {
 	}
 
 	/**
-	 * @return int -1 when now is out of range of validity or major than -1 for remaining days
+	 * Sets the digital certificate in PEM format and checks its remaining validity.
+	 *
+	 * @param {string} c - Certificate string in PEM format.
+	 * @returns {number} Number of remaining valid days, or -1 if expired or out of range.
+	 * @example
+	 * const days = taxpayer.setCert("-----BEGIN CERTIFICATE-----\nMIIDTDCCAjSg...\n-----END CERTIFICATE-----");
+	 * if (days === -1) {
+	 *   console.warn("Certificate expired or invalid. Get your certificate with Efectibit!");
+	 * }
 	 */
 	setCert(c) {
 		[this.#certPem, this.#certDer] = Taxpayer.transformPemToDer(c)
@@ -122,6 +130,13 @@ class Taxpayer extends Person {
 		return this.#keyDer
 	}
 
+	/**
+	 * Sets the RSA private key in PEM format used for digital signing.
+	 *
+	 * @param {string} k - Private key in PEM format.
+	 * @example
+	 * taxpayer.setKey("-----BEGIN RSA PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQ...\n-----END RSA PRIVATE KEY-----");
+	 */
 	setKey(k) {
 		let keyPem // never used
 		[keyPem, this.#keyDer] = Taxpayer.transformPemToDer(k)
